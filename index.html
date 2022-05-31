@@ -8,44 +8,76 @@
     <link rel="stylesheet" href="./assets/css/main.css" />
   </head>
   <body class="flex min-h-screen flex-col">
-    <header class="fixed w-full scroll-mt-[88px]">
+    <header class="header fixed w-full bg-rich-black-fogra-29">
       <div
-        class="flex justify-between items-center py-6 px-10 bg-rich-black-fogra-29 text-white"
+        class="h-24 flex justify-center md:justify-between items-center px-10 text-white"
       >
-        <h1 class="hidden sm:block text-4xl">Sinh Fu San</h1>
-        <nav class="space-x-10">
+        <h1 class="text-4xl font-bold">Sinh Fu San</h1>
+        <!-- Desktop Menu -->
+        <nav class="hidden md:flex justify-center items-center space-x-10">
           <a
-            class="cursor-pointer hover:underline hover:underline-offset-8"
-            href=""
+            class="nav-link cursor-pointer font-bold hover:underline hover:underline-offset-8"
+            href="#section-1"
             >About Me</a
           >
           <a
-            class="cursor-pointer hover:underline hover:underline-offset-8"
-            href=""
+            class="nav-link cursor-pointer font-bold hover:underline hover:underline-offset-8"
+            href="#section-2"
             >Work</a
           >
           <a
-            class="cursor-pointer hover:underline hover:underline-offset-8"
-            href=""
+            class="nav-link cursor-pointer font-bold hover:underline hover:underline-offset-8"
+            href="#section-3"
             >Resume</a
           >
           <a
-            class="bg-gamboge p-3 px-5 rounded cursor-pointer font-bold text-center animate-radiate hover:bg-ruby-red"
-            href=""
+            class="nav-link bg-blue-sapphire p-3 px-5 rounded cursor-pointer font-bold text-center animate-radiate hover:bg-ruby-red hover:transition-transform hover:animate-none hover:scale-110"
+            href="#section-3"
             >Hire Me</a
           >
         </nav>
-      </div>
-      <div class="hamburger">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
+        <!-- mobile menu -->
+        <nav
+          class="fixed left-full top-0 gap-0 bg-black w-full transition-transform nav-bar flex md:hidden flex-col justify-center items-center space-y-10 my-6"
+        >
+          <a
+            class="nav-link cursor-pointer font-bold hover:underline hover:underline-offset-8"
+            href="#section-1"
+            >About Me</a
+          >
+          <a
+            class="nav-link cursor-pointer font-bold hover:underline hover:underline-offset-8"
+            href="#section-2"
+            >Work</a
+          >
+          <a
+            class="nav-link cursor-pointer font-bold hover:underline hover:underline-offset-8"
+            href="#section-3"
+            >Resume</a
+          >
+          <a
+            class="nav-link bg-blue-sapphire p-3 px-5 rounded cursor-pointer font-bold text-center animate-radiate hover:bg-ruby-red hover:transition-transform hover:animate-none hover:scale-110"
+            href="#section-3"
+            >Hire Me</a
+          >
+        </nav>
+        <div class="absolute top-1 right-1 md:hidden hamburger">
+          <span
+            class="bar block w-8 h-0.5 m-2.5 transition-transform bg-white"
+          ></span>
+          <span
+            class="bar block w-8 h-0.5 m-2.5 transition-transform bg-white"
+          ></span>
+          <span
+            class="bar block w-8 h-0.5 m-2.5 transition-transform bg-white"
+          ></span>
+        </div>
       </div>
     </header>
-    <main class="flex-1">
-      <section class="h-screen">Section1</section>
-      <section class="h-screen">Section2</section>
-      <section class="h-screen">Section3</section>
+    <main class="flex-1 mt-22">
+      <section id="section-1" class="h-screen scroll-mt-22">Section1</section>
+      <section id="section-2" class="h-screen scroll-mt-22">Section2</section>
+      <section id="section-3" class="h-screen scroll-mt-22">Section3</section>
     </main>
     <script src="./assets/js/script.js"></script>
   </body>

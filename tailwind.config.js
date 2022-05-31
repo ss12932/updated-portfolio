@@ -9,6 +9,12 @@ module.exports = {
       "2xl": "1536px",
     },
     extend: {
+      scrollMargin: {
+        22: "88px",
+      },
+      margin: {
+        22: "88px",
+      },
       keyframes: {
         radiate: {
           "0%": { boxShadow: "0 0 0 0 rgba(255,255,255,1)" },
