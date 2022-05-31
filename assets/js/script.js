@@ -2,10 +2,11 @@
 
 //Declared Variables
 const introReveal = document.querySelectorAll(".intro-reveal");
-const navLinks = document.querySelector(".header");
+const header = document.querySelector(".header");
 const anchorLink = document.querySelector(".anchor-link");
 const hamburger = document.querySelector(".hamburger");
 const navBar = document.querySelector(".nav-bar");
+const section1 = document.querySelector("#section-1");
 const section2 = document.querySelector("#section-2");
 
 //Event Listeners
@@ -19,7 +20,7 @@ window.addEventListener("load", function (event) {
   });
 });
 //smooth scrolling nav bar
-navLinks.addEventListener("click", function (event) {
+header.addEventListener("click", function (event) {
   event.preventDefault(); //needed or smooth scrolling wont work. will instantly go onto next section.
   if (event.target.classList.contains("nav-link")) {
     const linkSection = event.target.getAttribute("href");
