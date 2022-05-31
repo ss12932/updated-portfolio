@@ -9,6 +9,9 @@ module.exports = {
       "2xl": "1536px",
     },
     extend: {
+      scale: {
+        flip: "-1",
+      },
       scrollMargin: {
         22: "88px",
       },

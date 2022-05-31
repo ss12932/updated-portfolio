@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Updated Portfolio</title>
     <link rel="stylesheet" href="./assets/css/main.css" />
+    <script
+      src="https://kit.fontawesome.com/489fc29660.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body class="flex min-h-screen flex-col">
     <header class="header fixed w-full bg-rich-black-fogra-29">
@@ -56,7 +60,7 @@
             >Resume</a
           >
           <a
-            class="block md:hidden nav-link cursor-pointer font-bold hover:underline hover:underline-offset-8 decoration-blue-sapphire"
+            class="block md:hidden nav-link cursor-pointer font-bold hover:underline hover:underline-offset-8 decoration-blue-sapphire hover:scale-x-flip"
             href="#section-3"
             >Hire Me</a
           >
@@ -75,10 +79,68 @@
       </div>
     </header>
     <main class="flex-1 mt-24">
-      <section id="section-1" class="h-screen scroll-mt-24">Section1</section>
-      <section id="section-2" class="h-screen scroll-mt-24">Section2</section>
-      <section id="section-3" class="h-screen scroll-mt-24">Section3</section>
+      <section
+        id="section-1"
+        class="h-screen bg-cover bg-transparent scroll-mt-24"
+        style="
+          background-image: linear-gradient(
+              rgba(0, 0, 0, 0.5),
+              rgba(0, 0, 0, 0.5)
+            ),
+            url('/assets/img/tom-w-zwdkxQZu0Ko-unsplash.jpg');
+        "
+      >
+        <div
+          class="h-full flex justify-start items-center flex-col space-y-16 py-20"
+        >
+          <span
+            class="intro-reveal opacity-0 transition-opacity text-8xl font-bold tracking-wider text-white"
+            >Hi,</span
+          >
+          <span
+            class="intro-reveal opacity-0 transition-opacity text-8xl font-bold tracking-wider text-white"
+          >
+            Welcome to</span
+          >
+          <span
+            class="intro-reveal opacity-0 transition-opacity text-8xl font-bold tracking-wider text-white"
+            >My Portfolio!</span
+          >
+          <a
+            class="intro-reveal anchor-link opacity-0 transition-opacity font-bold text-xl text-white p-3 bg-blue-sapphire rounded-lg hover:scale-110 hover:bg-ruby-red hover:transition-transform"
+            href="#section-2"
+            >About Me <i class="fa-solid fa-circle-arrow-down fa-lg ml-1"></i
+          ></a>
+        </div>
+      </section>
+      <section
+        id="section-2"
+        class="h-screen scroll-mt-24 bg-cover"
+        style="
+          background-image: linear-gradient(
+              rgba(0, 0, 0, 0.5),
+              rgba(0, 0, 0, 0.5)
+            ),
+            url('/assets/img/ethan-thompson-zCYaSP5PHy8-unsplash.jpg');
+        "
+      >
+        Section2
+      </section>
+      <section
+        id="section-3"
+        class="h-screen scroll-mt-24 bg-cover"
+        style="
+          background-image: linear-gradient(
+              rgba(0, 0, 0, 0.5),
+              rgba(0, 0, 0, 0.5)
+            ),
+            url('/assets/img/gabriel-mccallin-bOGL5uq52X8-unsplash.jpg');
+        "
+      >
+        Section3
+      </section>
     </main>
+
     <script src="./assets/js/script.js"></script>
   </body>
 </html>
