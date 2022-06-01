@@ -38,14 +38,14 @@ anchorLink.addEventListener("click", function (event) {
 //hamburger menu toggle active class
 hamburger.addEventListener("click", function () {
   hamburger.classList.toggle("active");
-  navBar.classList.toggle("active");
+  mobNavBar.classList.toggle("active");
 });
 
 //hamburger remove active class when link pressed.
 document.querySelectorAll(".nav-link ").forEach((link) =>
   link.addEventListener("click", function () {
     hamburger.classList.remove("active");
-    navBar.classList.remove("active");
+    mobNavBar.classList.remove("active");
   })
 );
 
@@ -87,7 +87,7 @@ const revealFadeSlide = function (entries, observer) {
 };
 const fadeSlideElObserver = new IntersectionObserver(revealFadeSlide, {
   root: null,
-  threshold: 0.15, //15 visible. not right away
+  threshold: 0.2, //20% visible. not right away
 });
 allFadeSlideEl.forEach(function (fadeSlideEl) {
   fadeSlideElObserver.observe(fadeSlideEl);
