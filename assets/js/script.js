@@ -69,20 +69,22 @@ const handleHoverImages = (e) => {
 
 navBar.addEventListener("mouseover", handleHoverImages);
 
-// const allSection = document.querySelectorAll(".section");
-// const revealSection = function (entries, observer) {
-//   const [entry] = entries;
-//   // console.log(entry);
-//   if (!entry.isIntersecting) return; //guard clause
-//   entry.target.classList.remove("opacity-0");
-//   observer.unobserve(entry.target); //as we scroll down page, unobserve webpage better for performance.
-// };
-// const sectionObserver = new IntersectionObserver(revealSection, {
-//   root: null,
-//   threshold: 0.15, //15 visible. not right away
-// });
-// allSection.forEach(function (section) {
-//   sectionObserver.observe(section);
-//   // section.classList.add('section--hidden');
-// });
-// //sticky nav appears just before section1, doesnt overlap any beginning part of section 1. + 90px will extend header section by 90x. use -90x. rem and percents dont work. nav appeared 90px before threshold reached. This set of values serves to grow or shrink each side of the root element's bounding box before computing intersections. dont hard code 90x, if dynamic  website different devices. will chaneg at certain pts. best to change it dynamically
+const allFadeSlideEl = document.querySelectorAll(".fadeSlideEl");
+const revealFadeSlide = function (entries, observer) {
+  const [entry] = entries;
+  console.log(entry);
+  // console.log(entry);
+  if (!entry.isIntersecting) return; //guard clause
+  entry.target.classList.remove("translate-y-10");
+  entry.target.classList.remove("opacity-0");
+  entry.target.classList.remove("translate-x-10");
+  entry.target.classList.remove("-translate-x-10");
+  observer.unobserve(entry.target); //as we scroll down page, unobserve webpage better for performance.
+};
+const fadeSlideElObserver = new IntersectionObserver(revealFadeSlide, {
+  root: null,
+  threshold: 0.15, //15 visible. not right away
+});
+allFadeSlideEl.forEach(function (fadeSlideEl) {
+  fadeSlideElObserver.observe(fadeSlideEl);
+});

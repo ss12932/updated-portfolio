@@ -32,6 +32,7 @@ module.exports = {
       },
       animation: {
         radiate: "radiate 2s infinite",
+        fadeInUp: "fadeInUp 2s infinite",
       },
       colors: {
         "rich-black-fogra-29": "#001219ff",
