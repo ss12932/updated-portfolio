@@ -75,10 +75,13 @@ const revealFadeSlide = function (entries, observer) {
   console.log(entry);
   // console.log(entry);
   if (!entry.isIntersecting) return; //guard clause
-  entry.target.classList.remove("translate-y-10");
-  entry.target.classList.remove("opacity-0");
-  entry.target.classList.remove("translate-x-10");
-  entry.target.classList.remove("-translate-x-10");
+  const animArr = [
+    "translate-y-10",
+    "opacity-0",
+    "translate-x-10",
+    "-translate-x-10",
+  ];
+  animArr.forEach((el) => entry.target.classList.remove(el));
   observer.unobserve(entry.target); //as we scroll down page, unobserve webpage better for performance.
 };
 const fadeSlideElObserver = new IntersectionObserver(revealFadeSlide, {
