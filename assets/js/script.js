@@ -5,7 +5,8 @@ const introReveal = document.querySelectorAll(".intro-reveal");
 const header = document.querySelector(".header");
 const anchorLink = document.querySelector(".anchor-link");
 const hamburger = document.querySelector(".hamburger");
-const navBar = document.querySelector(".nav-bar");
+const mobNavBar = document.querySelector(".mob-nav-bar");
+const deskNavBar = document.querySelector(".desk-nav-bar");
 const section1 = document.querySelector("#section-1");
 const section2 = document.querySelector("#section-2");
 
@@ -50,24 +51,24 @@ document.querySelectorAll(".nav-link ").forEach((link) =>
 
 const handleHoverImages = (e) => {
   const target = e.target;
+
+  const hrefArr = [
+    "/assets/img/tom-w-zwdkxQZu0Ko-unsplash.jpg",
+    "/assets/img/ethan-thompson-zCYaSP5PHy8-unsplash.jpg",
+    "/assets/img/gabriel-mccallin-bOGL5uq52X8-unsplash.jpg",
+  ];
+
   if (target.matches("a")) {
-    const href = target.getAttribute("href");
-    if (href === "#section-1") {
-      section1.style.backgroundImage =
-        "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/img/tom-w-zwdkxQZu0Ko-unsplash.jpg')";
-    }
-    if (href === "#section-2") {
-      section1.style.backgroundImage =
-        "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/img/ethan-thompson-zCYaSP5PHy8-unsplash.jpg')";
-    }
-    if (href === "#section-3") {
-      section1.style.backgroundImage =
-        "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/img/gabriel-mccallin-bOGL5uq52X8-unsplash.jpg')";
-    }
+    const hrefLink = target.getAttribute("href");
+    hrefArr.forEach((href, i) => {
+      if (hrefLink === `#section-${i + 1}`) {
+        section1.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${href})`;
+      }
+    });
   }
 };
 
-navBar.addEventListener("mouseover", handleHoverImages);
+deskNavBar.addEventListener("mouseover", handleHoverImages);
 
 const allFadeSlideEl = document.querySelectorAll(".fadeSlideEl");
 const revealFadeSlide = function (entries, observer) {
