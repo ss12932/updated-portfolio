@@ -21,6 +21,9 @@ module.exports = {
       height: {
         "10vh": "10vh",
       },
+      maxWidth: {
+        276: "69rem",
+      },
       keyframes: {
         radiate: {
           "0%": { boxShadow: "0 0 0 0 rgba(255,255,255,1)" },

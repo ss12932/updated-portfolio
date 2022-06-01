@@ -4,7 +4,7 @@
 
 .hamburger.active .bar:nth-child(1) {
   transform: translateY(0.7em) rotate(45deg);
-  background-color: #005f73ff;
+  background-color: #bb3e03ff;
 }
 
 .hamburger.active .bar:nth-child(2) {
@@ -13,7 +13,7 @@
 
 .hamburger.active .bar:nth-child(3) {
   transform: translateY(-0.7em) rotate(-45deg);
-  background-color: #005f73ff;
+  background-color: #bb3e03ff;
 }
 
 .nav-bar.active {
