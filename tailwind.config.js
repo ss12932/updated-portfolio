@@ -21,6 +21,9 @@ module.exports = {
       flex: {
         0.5: "0.5 1 0%",
       },
+      saturate: {
+        400: "400",
+      },
       height: {
         "10vh": "10vh",
         "40vh": "40vh",
@@ -39,6 +42,7 @@ module.exports = {
       },
       transitionProperty: {
         flex: "flex",
+        filter: "filter",
       },
       keyframes: {
         radiate: {
