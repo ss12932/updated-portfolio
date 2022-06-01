@@ -16,6 +16,13 @@
   background-color: #bb3e03ff;
 }
 
-.nav-bar.active {
+.mob-nav-bar.active {
   left: 0;
+}
+.panel.active {
+  flex: 10;
+}
+
+.panel.active h3 {
+  opacity: 1;
 }

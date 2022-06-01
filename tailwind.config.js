@@ -18,11 +18,27 @@ module.exports = {
       margin: {
         22: "88px",
       },
+      flex: {
+        0.5: "0.5 1 0%",
+      },
       height: {
         "10vh": "10vh",
+        "40vh": "40vh",
+        "60vh": "60vh",
+        "80vh": "80vh",
+      },
+      width: {
+        "10vw": "10vw",
+        "40vw": "40vw",
+        "60vw": "60vw",
+        "80vw": "80vw",
+        "90vw": "90vw",
       },
       maxWidth: {
         276: "69rem",
+      },
+      transitionProperty: {
+        flex: "flex",
       },
       keyframes: {
         radiate: {

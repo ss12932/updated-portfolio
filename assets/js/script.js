@@ -4,11 +4,13 @@
 const introReveal = document.querySelectorAll(".intro-reveal");
 const header = document.querySelector(".header");
 const anchorLink = document.querySelector(".anchor-link");
+const learnMoreLink = document.querySelector(".learn-more-link");
 const hamburger = document.querySelector(".hamburger");
 const mobNavBar = document.querySelector(".mob-nav-bar");
-const deskNavBar = document.querySelector(".desk-nav-bar");
 const section1 = document.querySelector("#section-1");
 const section2 = document.querySelector("#section-2");
+const section3 = document.querySelector("#section-3");
+const panels = document.querySelectorAll(".panel");
 
 //Event Listeners
 window.addEventListener("load", function (event) {
@@ -34,6 +36,10 @@ anchorLink.addEventListener("click", function (event) {
   event.preventDefault();
   section2.scrollIntoView({ behavior: "smooth" });
 });
+learnMoreLink.addEventListener("click", function (event) {
+  event.preventDefault();
+  section3.scrollIntoView({ behavior: "smooth" });
+});
 
 //hamburger menu toggle active class
 hamburger.addEventListener("click", function () {
@@ -42,7 +48,7 @@ hamburger.addEventListener("click", function () {
 });
 
 //hamburger remove active class when link pressed.
-document.querySelectorAll(".nav-link ").forEach((link) =>
+document.querySelectorAll(".nav-link").forEach((link) =>
   link.addEventListener("click", function () {
     hamburger.classList.remove("active");
     mobNavBar.classList.remove("active");
@@ -59,6 +65,8 @@ const handleHoverImages = (e) => {
   ];
 
   if (target.matches("a")) {
+    // const hrefRandomIndex = Math.floor(Math.random() * hrefArr.length + 1);
+    // section1.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${hrefArr[hrefRandomIndex]})`;
     const hrefLink = target.getAttribute("href");
     hrefArr.forEach((href, i) => {
       if (hrefLink === `#section-${i + 1}`) {
@@ -68,7 +76,7 @@ const handleHoverImages = (e) => {
   }
 };
 
-deskNavBar.addEventListener("mouseover", handleHoverImages);
+header.addEventListener("mouseover", handleHoverImages);
 
 const allFadeSlideEl = document.querySelectorAll(".fadeSlideEl");
 const revealFadeSlide = function (entries, observer) {
@@ -87,8 +95,19 @@ const revealFadeSlide = function (entries, observer) {
 };
 const fadeSlideElObserver = new IntersectionObserver(revealFadeSlide, {
   root: null,
-  threshold: 0.2, //20% visible. not right away
+  threshold: 0.15, //15% visible. not right away
 });
 allFadeSlideEl.forEach(function (fadeSlideEl) {
   fadeSlideElObserver.observe(fadeSlideEl);
+});
+const removeActiveClasses = () => {
+  panels.forEach((panel) => {
+    panel.classList.remove("active");
+  });
+};
+panels.forEach((panel) => {
+  panel.addEventListener("click", () => {
+    removeActiveClasses();
+    panel.classList.add("active");
+  });
 });
