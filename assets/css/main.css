@@ -468,6 +468,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-backdrop-sepia:  ;
 }
 
+.visible {
+  visibility: visible;
+}
+
 .fixed {
   position: fixed;
 }
@@ -500,12 +504,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin: 0.5rem;
 }
 
-.ml-1 {
-  margin-left: 0.25rem;
-}
-
 .mt-24 {
   margin-top: 6rem;
+}
+
+.ml-1 {
+  margin-left: 0.25rem;
 }
 
 .block {
@@ -520,8 +524,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: none;
 }
 
-.h-10vh {
-  height: 10vh;
+.h-24 {
+  height: 6rem;
 }
 
 .h-0\.5 {
@@ -532,16 +536,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 0px;
 }
 
-.h-full {
-  height: 100%;
-}
-
 .h-screen {
   height: 100vh;
 }
 
-.h-24 {
-  height: 6rem;
+.h-full {
+  height: 100%;
+}
+
+.h-3\/6 {
+  height: 50%;
 }
 
 .min-h-screen {
@@ -556,8 +560,24 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 2rem;
 }
 
+.w-3\/6 {
+  width: 50%;
+}
+
+.w-36 {
+  width: 9rem;
+}
+
 .flex-1 {
   flex: 1 1 0%;
+}
+
+.shrink {
+  flex-shrink: 1;
+}
+
+.grow {
+  flex-grow: 1;
 }
 
 @-webkit-keyframes radiate {
@@ -639,6 +659,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-radius: 0.5rem;
 }
 
+.rounded-md {
+  border-radius: 0.375rem;
+}
+
 .bg-rich-black-fogra-29 {
   background-color: #001219ff;
 }
@@ -656,8 +680,21 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: transparent;
 }
 
+.bg-gamboge {
+  background-color: #ee9b00ff;
+}
+
+.bg-ruby-red {
+  background-color: #9b2226ff;
+}
+
 .bg-cover {
   background-size: cover;
+}
+
+.object-contain {
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .p-3 {
@@ -693,8 +730,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 2.5rem;
 }
 
-.text-8xl {
-  font-size: 6rem;
+.text-5xl {
+  font-size: 3rem;
   line-height: 1;
 }
 
@@ -719,6 +756,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .decoration-blue-sapphire {
   -webkit-text-decoration-color:  #005f73ff;
           text-decoration-color:  #005f73ff;
+}
+
+.decoration-gamboge {
+  -webkit-text-decoration-color: #ee9b00ff;
+          text-decoration-color: #ee9b00ff;
 }
 
 .opacity-0 {
@@ -805,5 +847,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .md\:justify-between {
     justify-content: space-between;
+  }
+
+  .md\:text-8xl {
+    font-size: 6rem;
+    line-height: 1;
   }
 }

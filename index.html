@@ -18,49 +18,49 @@
         >
           <h1 class="text-4xl font-bold">Sinh Fu San</h1>
           <!-- Desktop Menu -->
-          <nav class="hidden md:flex justify-center items-center space-x-10">
+          <nav class="nav-bar hidden md:flex justify-center items-center space-x-10">
             <a
-              class="nav-link cursor-pointer font-bold hover:underline hover:underline-offset-8 decoration-blue-sapphire"
+              class="nav-link cursor-pointer font-bold hover:underline hover:underline-offset-8 decoration-gamboge"
               href="#section-1"
               >About Me</a
             >
             <a
-              class="nav-link cursor-pointer font-bold hover:underline hover:underline-offset-8 decoration-blue-sapphire"
+              class="nav-link cursor-pointer font-bold hover:underline hover:underline-offset-8 decoration-gamboge"
               href="#section-2"
               >Work</a
             >
             <a
-              class="nav-link cursor-pointer font-bold hover:underline hover:underline-offset-8 decoration-blue-sapphire"
+              class="nav-link cursor-pointer font-bold hover:underline hover:underline-offset-8 decoration-gamboge"
               href="#section-3"
               >Resume</a
             >
             <a
-              class="nav-link bg-blue-sapphire p-3 px-5 rounded cursor-pointer font-bold text-center animate-radiate hover:bg-ruby-red hover:transition-transform hover:animate-none hover:scale-110"
+              class="nav-link bg-gamboge p-3 px-5 rounded cursor-pointer font-bold text-center animate-radiate hover:bg-ruby-red hover:transition-transform hover:animate-none hover:scale-110"
               href="#section-3"
               >Hire Me</a
             >
           </nav>
           <!-- mobile menu -->
           <nav
-            class="fixed left-full top-0 gap-0 bg-rich-black-fogra-29 w-full transition-transform nav-bar flex md:hidden flex-col justify-center items-center space-y-10 py-10"
+            class="nav-bar fixed left-full top-0 gap-0 bg-rich-black-fogra-29 w-full transition-transform  flex md:hidden flex-col justify-center items-center space-y-10 py-10"
           >
             <a
-              class="nav-link cursor-pointer font-bold hover:underline hover:underline-offset-8 decoration-blue-sapphire"
+              class="nav-link cursor-pointer font-bold hover:underline hover:underline-offset-8 decoration-gamboge"
               href="#section-1"
               >About Me</a
             >
             <a
-              class="nav-link cursor-pointer font-bold hover:underline hover:underline-offset-8 decoration-blue-sapphire"
+              class="nav-link cursor-pointer font-bold hover:underline hover:underline-offset-8 decoration-gamboge"
               href="#section-2"
               >Work</a
             >
             <a
-              class="nav-link cursor-pointer font-bold hover:underline hover:underline-offset-8 decoration-blue-sapphire"
+              class="nav-link cursor-pointer font-bold hover:underline hover:underline-offset-8 decoration-gamboge"
               href="#section-3"
               >Resume</a
             >
             <a
-              class="block md:hidden nav-link cursor-pointer font-bold hover:underline hover:underline-offset-8 decoration-blue-sapphire hover:scale-x-flip"
+              class="block md:hidden nav-link cursor-pointer font-bold hover:underline hover:underline-offset-8 decoration-gamboge hover:scale-x-flip"
               href="#section-3"
               >Hire Me</a
             >
@@ -95,20 +95,20 @@
           class="h-full flex justify-start items-center flex-col space-y-16 py-20"
         >
           <span
-            class="intro-reveal opacity-0 transition-opacity text-8xl font-bold tracking-wider text-white"
+            class="intro-reveal opacity-0 transition-opacity text-5xl md:text-8xl font-bold tracking-wider text-white"
             >Hi,</span
           >
           <span
-            class="intro-reveal opacity-0 transition-opacity text-8xl font-bold tracking-wider text-white"
+            class="intro-reveal opacity-0 transition-opacity text-5xl md:text-8xl font-bold tracking-wider text-white"
           >
             Welcome to</span
           >
           <span
-            class="intro-reveal opacity-0 transition-opacity text-8xl font-bold tracking-wider text-white"
+            class="intro-reveal opacity-0 transition-opacity text-5xl md:text-8xl font-bold tracking-wider text-white"
             >My Portfolio!</span
           >
           <a
-            class="intro-reveal anchor-link opacity-0 transition-opacity font-bold text-xl text-white p-3 bg-blue-sapphire rounded-lg hover:scale-110 hover:bg-ruby-red hover:transition-transform"
+            class="intro-reveal anchor-link opacity-0 transition-opacity font-bold text-xl text-white p-3 bg-gamboge rounded-lg hover:scale-110 hover:bg-ruby-red hover:transition-transform"
             href="#section-2"
             >About Me <i class="fa-solid fa-circle-arrow-down fa-lg ml-1"></i
           ></a>
@@ -116,7 +116,7 @@
       </section>
       <section
         id="section-2"
-        class="section h-screen opacity scroll-mt-24 bg-cover"
+        class="section h-screen opacity scroll-mt-24 bg-cover flex justify-center items-center"
         style="
           background-image: linear-gradient(
               rgba(0, 0, 0, 0.5),
@@ -125,7 +125,15 @@
             url('/assets/img/ethan-thompson-zCYaSP5PHy8-unsplash.jpg');
         "
       >
-        Section2
+        <div class="flex items-center px-10 w-3/6 h-3/6 rounded-md bg-white space-x-10">
+          <div class="w-36">
+            <img class="object-contain rounded-lg" src="./assets/img/IMG_1724.jpg" alt="">
+          </div>
+          <div>
+            <h2></h2>
+            <p>I'm a full stack web developer looking for a front end developer </p>
+          </div>
+        </div>
       </section>
       <section
         id="section-3"
