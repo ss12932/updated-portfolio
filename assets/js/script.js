@@ -95,7 +95,8 @@ const revealFadeSlide = function (entries, observer) {
 };
 const fadeSlideElObserver = new IntersectionObserver(revealFadeSlide, {
   root: null,
-  threshold: 0.15, //15% visible. not right away
+  threshold: 0.1, //10% visible. not right away
+  rootMargin: "-50px",
 });
 allFadeSlideEl.forEach(function (fadeSlideEl) {
   fadeSlideElObserver.observe(fadeSlideEl);
