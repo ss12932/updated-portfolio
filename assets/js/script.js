@@ -60,9 +60,9 @@ const handleHoverImages = (e) => {
   const target = e.target;
 
   const hrefArr = [
-    "/assets/img/tom-w-zwdkxQZu0Ko-unsplash.jpg",
-    "/assets/img/ethan-thompson-zCYaSP5PHy8-unsplash.jpg",
-    "/assets/img/gabriel-mccallin-bOGL5uq52X8-unsplash.jpg",
+    "./assets/img/tom-w-zwdkxQZu0Ko-unsplash.jpg",
+    "./assets/img/ethan-thompson-zCYaSP5PHy8-unsplash.jpg",
+    "./assets/img/gabriel-mccallin-bOGL5uq52X8-unsplash.jpg",
   ];
 
   if (target.matches("a")) {
