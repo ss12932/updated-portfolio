@@ -24,8 +24,9 @@ window.addEventListener("load", function (event) {
 });
 //smooth scrolling nav bar
 header.addEventListener("click", function (event) {
-  event.preventDefault(); //needed or smooth scrolling wont work. will instantly go onto next section.
+  //needed or smooth scrolling wont work. will instantly go onto next section.
   if (event.target.classList.contains("nav-link")) {
+    event.preventDefault();
     const linkSection = event.target.getAttribute("href");
     document.querySelector(linkSection).scrollIntoView({ behavior: "smooth" });
   }
